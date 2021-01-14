@@ -193,7 +193,7 @@ function TasklistComponent(props) {
 								</Spinner>
 							</td>
 						</tr>
-					) : (
+					) : tasks.tasks.length === 0 ? <tr><td colSpan={3}><strong>No Tasks For Today</strong></td></tr> : (
 						tasks.tasks.map((task, index) => (
 							<tr key={index}>
 								<td>
